@@ -16,6 +16,10 @@ public class Car extends Vehicle {
         return discountApplied;
     }
 
+    public void setDiscountApplied(boolean bool) {
+        discountApplied = bool;
+    }
+
     public void printCar() {
         String str = "";
         str += "License Plate: " + getLicensePlate();
@@ -36,6 +40,9 @@ public class Car extends Vehicle {
     }
 
     public void applyDiscount() {
-        if (!discountApplied)
+        if (!discountApplied && electric) {
+            setTollFee(getTollFee() * 0.5);
+            discountApplied = true;
+        }
     }
 }
