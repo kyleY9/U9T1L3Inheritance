@@ -17,6 +17,4 @@ public class Taxi extends Car {
         printCar();
         System.out.println("Fare Collected: " + fareCollected);
     }
-
-
 }

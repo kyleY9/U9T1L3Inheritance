@@ -25,4 +25,17 @@ public class Car extends Vehicle {
         str += "\nIs Discount Applied: " + discountApplied;
         System.out.println(str);
     }
+
+    public boolean dropOffPassengers(int numOut) {
+        if (numOut < getPassengers()) {
+            setPassengers(getPassengers() - numOut);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void applyDiscount() {
+        if (!discountApplied)
+    }
 }
